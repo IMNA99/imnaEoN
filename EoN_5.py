@@ -2,15 +2,15 @@
 #입력 -> 배열 자르기 -> 오름차순 정렬 -> k번째 숫자 출력
 
 
-	#array 입력
-array = int(input())
+	#array 입출력
+array = list(map(int,input().split(',')))
 print(array)
-	#commands 입력
-commands = int(input())
+	#commands 입출력 i, j, k
+commands = list(map(int,input().split(',')))
 print(commands)
 
 
-	#solution 함수
+	#사용자 정의 함수 : solution 함수
 def solution(array, commands) :
 	answer = []
 	for (i, j, k) in commands : #커멘드 순차 입력
