@@ -3,10 +3,10 @@
 
 
 	#array 입력
-array = list(map(int, input(). split()))
+array = [list(map(int, input(). split(',')))]
 print(array)
 	#commands 입력
-commands = [list(map(int, input().split())) for _ in range(3)]
+commands = [list(map(int, input().split(',')))]
 print(commands)
 
 
