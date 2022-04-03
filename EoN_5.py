@@ -3,10 +3,10 @@
 
 
 	#array 입력
-array = input()
+array = int(input())
 print(array)
 	#commands 입력
-commands = input()
+commands = int(input())
 print(commands)
 
 
