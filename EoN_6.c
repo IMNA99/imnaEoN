@@ -5,31 +5,39 @@ int main(void)
 {
     int N;
     int i;
-    int piz[20]; //ÀÓÀÇ·Î ¼³Á¤
+    int pizz[4];
+    int piz[20]; //ìž„ì˜ë¡œ ì„¤ì •
 
-    //ÃÊ±â¼³Á¤: N>3 ÀÏ¶§, Á¶°ÇÀÌ ¼º¸³ÇÏ±â ¶§¹®
-    piz[1] = 1;
-    piz[2] = 1;
+    //ì´ˆê¸°ì„¤ì •: N>3 ì¼ë•Œ, ì¡°ê±´ì´ ì„±ë¦½í•˜ê¸° ë•Œë¬¸
+    pizz[1] = 1;
+    pizz[2] = 1;
+    pizz[3] = 3;
+    
+    //ê·œì¹™ ëŒ€ìž… ê°’    
+    piz[2] = 2;
+    piz[3] = 3;
 
-    //ÀÔ·Â
-    printf("ÇÇÀÚ Á¶°¢ÀÇ ¼ö NÀ» ÀÔ·ÂÇÏ½Ã¿À. : ");
+
+    //ìž…ë ¥
+    printf("í”¼ìž ì¡°ê°ì˜ ìˆ˜ Nì„ ìž…ë ¥í•˜ì‹œì˜¤. : ");
     scanf("%d", &N);
 
 
-    if (N < 3) //ÇÇÀÚ Á¶°¢¼ö°¡ 3 ¹Ì¸¸ÀÏ ¶§, ÃÊ±â¼³Á¤ Ãâ·Â
+    if (N < 4) //í”¼ìž ì¡°ê°ìˆ˜ê°€ 3 ì´í•˜ì¼ ë•Œ, ì´ˆê¸°ì„¤ì • ì¶œë ¥
     {
-        printf("°¡´ÉÇÑ ¹æ¹ýÀÇ ¼ö´Â %d°³ ÀÔ´Ï´Ù.\n", piz[N]);
+        printf("ê°€ëŠ¥í•œ ë°©ë²•ì˜ ìˆ˜ëŠ” %dê°œ ìž…ë‹ˆë‹¤.\n", pizz[N]);
         return;
     }
     else
     {
-        for (i = 3; i < N ; i++)
+        for (i = 4; i <= N ; i++)
         {
-            piz[i] = piz[i - 1] + piz[i - 2]; //Á¶°¢ ±ÔÄ¢
+            piz[i] = piz[i - 1] + piz[i - 2]; //ì¡°ê° ê·œì¹™
         }
     }
 
-    printf("°¡´ÉÇÑ ¹æ¹ýÀÇ ¼ö´Â %d°³ ÀÔ´Ï´Ù.\n", piz[N]);
+    //ì¶œë ¥
+    printf("ê°€ëŠ¥í•œ ë°©ë²•ì˜ ìˆ˜ëŠ” %dê°œ ìž…ë‹ˆë‹¤.\n", piz[N]);
 
     return 0;
 }
